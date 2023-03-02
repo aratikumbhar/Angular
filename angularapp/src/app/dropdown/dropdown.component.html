@@ -1,0 +1,18 @@
+
+
+
+<div class="container">
+    <label class="nice"> Country </label>
+
+    <div>
+        <select class="error" (change)="onCountrySelect($event)">
+            <option *ngFor ="let count of countries"> {{count.name}} </option>
+        </select>
+    </div>
+
+    <label class="err1"> States </label>
+    <div>
+        <select class="error">
+            <option *ngFor = "let city of arrStates"> {{city.name}} </option>
+        </select>
+    </div>

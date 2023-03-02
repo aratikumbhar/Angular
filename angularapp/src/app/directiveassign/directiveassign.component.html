@@ -1,0 +1,29 @@
+<h2 class="assign"> Directive Assignment </h2>
+
+<div class="container">
+
+    <ol>   
+        <li>
+          <div>
+              <button id="btn" (click)="toggleDisplayDetails()">Display Details</button>
+          </div>
+         </li> 
+         
+  
+         <li>
+          <div class="para">
+              <p *ngIf="isShow">{{pass}}</p>
+          </div> 
+         </li>
+         
+  
+         <li id="first">
+          <div id="second" *ngFor="let c of count" 
+          [ngStyle]="{'background-color':c >= 5 ? 'blue' : 'transparent'}" 
+          [ngClass]="{'text-white' : c >= 5}">
+              {{currentTime()}}
+          </div>
+         </li>         
+  </ol>
+     
+</div>

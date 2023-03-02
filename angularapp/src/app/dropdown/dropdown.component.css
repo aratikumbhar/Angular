@@ -1,0 +1,23 @@
+
+ .container{
+     text-align: center;
+     height: 700px;
+     width: 800px;
+     background-color: beige;
+     font-weight: bolder;
+     margin-top: 20px;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ .error{
+    margin-top: 10px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+.err1, .nice{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: 20px;
+}

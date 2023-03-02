@@ -1,0 +1,27 @@
+
+
+<button (click)="onButtonClick()"> Click Me </button>
+
+<p> Count is : {{count}} </p>
+
+ <input type="text" (keyup)="onKeyUp($event)"> 
+
+
+
+ <input type="text" [(ngModel)]="firstName">
+
+{{firstName}}
+<br>
+
+ <h3> Two way databinding assignment </h3>
+
+<p> User Name is : {{userName}} </p>
+
+<input type="text" placeholder=" " name="username" [(ngModel)]="userName"><br>
+
+<br>
+
+<button type="reset" (click)="onReset()"> Reset </button> 
+
+<button class="btn btn-primary" (click)="sendToParent()"> Click me from Test2 </button>
+

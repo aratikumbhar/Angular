@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5 text-left rounded shadow py-5">
+            <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+                <h4 style="text-align:center">Reactive Form Assignment</h4>
+                <div class="form-group mb-3">
+                    <label for="email">Email</label>
+                    <input type="text" formControlName="email" class="form-control" id="email"
+                     placeholder="Enter email address">
+                    <small class="text-danger" 
+                    *ngIf="!myReactiveForm.get('email').valid &&
+                     myReactiveForm.get('email').touched">
+                    Email is required.
+                    </small>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="subscript">Subscriptions</label>
+                    <select formControlName="subscript" id="subscript" class="form-control" [ngModel]="selectedSubscription">
+                        <option value="Basic">Basic</option>
+                        <option value="Advanced">Advanced</option>
+                        <option value="Pro">Pro</option>
+                    </select>
+                </div> 
+                <div class="form-group mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" formControlName="password">
+                    <div class="text-danger"
+                     *ngIf="!myReactiveForm.get('password').valid &&
+                      myReactiveForm.get('password').touched">
+                        Password is required.
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="date"> Date : </label>
+                    <input type="date" formControlName="date" name="date" [max]="getToday()">
+                </div>
+                <div class="form-group mb-3">
+                    <div class="text-danger" 
+                    *ngIf="!myReactiveForm.get('date').valid && 
+                    myReactiveForm.get('date').touched">
+                        Date is required and date must be today or in future
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="submitted">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
