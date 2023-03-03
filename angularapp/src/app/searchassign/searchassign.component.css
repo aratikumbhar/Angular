@@ -1,0 +1,11 @@
+.table-dark{
+    color: rgb(240, 9, 9);
+}
+table{
+    width: 450px;
+    height: 700px;
+    margin-left: 300px;
+}
+.col-md-5{
+    margin-left: 300px;
+}

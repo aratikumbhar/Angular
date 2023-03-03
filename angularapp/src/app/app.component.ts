@@ -33,25 +33,14 @@ export class AppComponent implements OnInit {
   imageUrl = 'https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg';
   
   serverId : number = 20;
-  products = {};
-  users;
-  userData;
+
   
-  constructor(private myservice: MyserviceService, private demoService: DemoService) {
+  constructor() {
     this.getValueFromServer();
   }
 
   ngOnInit(): void {
-    this.products = this.myservice.products;
-    // this.demoService.getUsers().subscribe(res => {
-    //   console.log('user api results', res);
-    // }, err => {
-    //   console.log(err);
-    // })
-    this.demoService.getUsers().subscribe(res=>{
-      console.log(res);      
-      this.userData=res;
-    })
+
   }
 
   getValueFromServer(){

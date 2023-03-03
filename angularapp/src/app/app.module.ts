@@ -45,6 +45,13 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { ReactassignComponent } from './reactassign/reactassign.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PipeexampleComponent } from './pipeexample/pipeexample.component';
+import { CustomPipe } from './custom.pipe';
+import { SearchPipe } from './search.pipe';
+import { ProductFilterComponent } from './product-filter/product-filter.component';
+import { SearchassignComponent } from './searchassign/searchassign.component';
+import { ReeactiveassignComponent } from './reeactiveassign/reeactiveassign.component';
+
 
 
 @NgModule({
@@ -67,7 +74,12 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveformComponent,
     ReactiveComponent,
     ReactassignComponent,
- 
+    PipeexampleComponent,
+    CustomPipe,
+    SearchPipe,
+    ProductFilterComponent,
+    SearchassignComponent,
+    ReeactiveassignComponent,
   ],
   imports: [
     BrowserModule,
