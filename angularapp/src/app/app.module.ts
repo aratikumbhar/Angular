@@ -54,6 +54,19 @@ import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProductComponent } from './product/product.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { MobileComponent } from './product/mobile/mobile.component';
+import { CameraComponent } from './product/camera/camera.component';
+import { WatchComponent } from './product/watch/watch.component';
+import { UserComponent } from './user/user.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
 
@@ -87,6 +100,19 @@ import { Comp4Component } from './comp4/comp4.component';
     Comp2Component,
     Comp3Component,
     Comp4Component,
+    AboutusComponent,
+    ContactusComponent,
+    HomeComponent,
+    PagenotfoundComponent,
+    ProductComponent,
+    DemopostComponent,
+    DemopostdetailsComponent,
+    LaptopComponent,
+    MobileComponent,
+    CameraComponent,
+    WatchComponent,
+    UserComponent,
+    UserdetailsComponent,
 
   ],
   imports: [

@@ -1,9 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <!-- <h1>
+  <h1>
     Welcome to {{ title }}! 
-    {{name}}
-  </h1> -->
+    <!-- {{name}} -->
+  </h1>
    <!-- <h4>  {{Now}}</h4> -->
   <!-- <p> Server Id : {{serverId}} </p> -->
   
@@ -63,7 +63,7 @@
 <!-- <app-product-filter></app-product-filter> -->
 <!-- <app-searchassign></app-searchassign> -->
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-6">
     <div>
       <app-comp1></app-comp1>
@@ -84,5 +84,18 @@
       <app-comp4></app-comp4>
     </div>
   </div>
-</div>
+</div> -->
+
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-items"> <a routerLinkActive="active" routerLink="/home" class="nav-link">Home</a> </li>
+      <li class="nav-items"> <a routerLinkActive="active" routerLink="/aboutus" class="nav-link">AboutUs</a> </li>
+      <li class="nav-items"> <a routerLinkActive="active" routerLink="/contactus" class="nav-link">ContactUs</a> </li>
+      <li class="nav-items"> <a routerLinkActive="active" routerLink="/product" class="nav-link">Product</a> </li>
+      <li class="nav-items"> <a routerLinkActive="active" routerLink="/post" class="nav-link">Post</a> </li>
+      <li class="nav-items"> <a routerLinkActive="active" routerLink="/user" class="nav-link">User</a> </li>
+    </ul>
+  </nav>
+</header>
 <router-outlet></router-outlet>

@@ -5,6 +5,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DemoService {
+  getPostById(id: any) {
+    throw new Error('Method not implemented.');
+  }
+  get(id: any) {
+    throw new Error('Method not implemented.');
+  }
 
   apiUrl = 'https://jsonplaceholder.typicode.com/users';
 

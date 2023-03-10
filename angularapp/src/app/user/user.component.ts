@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { DemoService } from '../services/demo.service';
-import { MyserviceService } from '../services/myservice.service';
 
 @Component({
-  selector: 'app-searchassign',
-  templateUrl: './searchassign.component.html',
-  styleUrls: ['./searchassign.component.css']
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
-export class SearchassignComponent implements OnInit {
+export class UserComponent implements OnInit {
 
   products = {};
-  users;
+  users = [];
   userData;
   namesearch: string = '';
-  constructor(private myservice: MyserviceService, private demoService: DemoService) { }
+
+  constructor(private demoService: DemoService) { }
 
   ngOnInit() {
-    this.products = this.myservice.products;
+    // this.products = this.myservice.products;
     // this.demoService.getUsers().subscribe(res => {
     //   console.log('user api results', res);
     // }, err => {
@@ -26,6 +26,7 @@ export class SearchassignComponent implements OnInit {
       console.log(res);      
       this.userData=res;
     });
+
   }
 
 }
