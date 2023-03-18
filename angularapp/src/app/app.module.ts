@@ -16,7 +16,7 @@ import { SwitchdropdownComponent } from './switchdropdown/switchdropdown.compone
 import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
 import { DirectiveassignComponent } from './directiveassign/directiveassign.component';
-import { CustomDirective } from './custom.directive';
+// import { CustomDirective } from './custom.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule, MatSlideToggleModule } from '@angular/material';
 import {MatMenuModule} from '@angular/material/menu';
@@ -58,15 +58,11 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ProductComponent } from './product/product.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { MobileComponent } from './product/mobile/mobile.component';
-import { CameraComponent } from './product/camera/camera.component';
-import { WatchComponent } from './product/watch/watch.component';
-import { UserComponent } from './user/user.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { ProductModule } from './product/product.module';
+import { OrdersModule } from './orders/orders.module';
 
 
 
@@ -86,7 +82,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     NgstyleComponent,
     NgclassComponent,
     DirectiveassignComponent,
-    CustomDirective,
+   // CustomDirective,
     TemplateformComponent,
     ReactiveformComponent,
     ReactiveComponent,
@@ -104,14 +100,8 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     ContactusComponent,
     HomeComponent,
     PagenotfoundComponent,
-    ProductComponent,
     DemopostComponent,
     DemopostdetailsComponent,
-    LaptopComponent,
-    MobileComponent,
-    CameraComponent,
-    WatchComponent,
-    UserComponent,
     UserdetailsComponent,
 
   ],
@@ -144,7 +134,9 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     MatStepperModule,
     MatProgressBarModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ProductModule,
+    OrdersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

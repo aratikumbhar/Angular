@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { MyserviceService } from '../services/myservice.service';
 
 @Component({
@@ -32,7 +33,7 @@ export class TemplateformComponent implements OnInit {
   ]
   emails='';
 
-  constructor(private objService: MyserviceService) { }
+  constructor(private objService: MyserviceService,private route: Router) { }
 
   ngOnInit() {
     this.objService.print();
@@ -44,8 +45,11 @@ export class TemplateformComponent implements OnInit {
 
 
   login(form: NgForm) {
+    this.route.navigate(['/userdetails']);
     this.isSubmitted = true;
     console.log(form);
+
+    
 
  this.formData.email = form.value.email;
  this.formData.password = form.value.password;

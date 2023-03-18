@@ -19,7 +19,7 @@ export class DemopostdetailsComponent implements OnInit {
     this.postService.getPostById(id).subscribe( res => {
       console.log('get post by ID', res);
       this.arr1 = res;
-    })
+    });
    
   }
 
