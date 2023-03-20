@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from './models/employee';
-import { DemoService } from './services/demo.service';
-import { MyserviceService } from './services/myservice.service';
+import { RapidapiService } from './services/rapidapi.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,11 @@ import { MyserviceService } from './services/myservice.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  data = 0;
+
+  
+
   parantToChild : string = "I am coming from parent";
 
   posts = [
@@ -25,22 +30,24 @@ export class AppComponent implements OnInit {
   title = 'angularapp';
   name = 'Arati';
   empCount;
-  data = {
-    name : 'Codemind',
-    dept : 'IT'
-  }
+  // data = {
+  //   name : 'Codemind',
+  //   dept : 'IT'
+  // }
 
   imageUrl = 'https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg';
   
   serverId : number = 20;
 
   
-  constructor() {
+  constructor(private rapidapiService: RapidapiService) {
     this.getValueFromServer();
   }
 
   ngOnInit(): void {
-
+    this.rapidapiService.getFinance().subscribe(res => {
+      console.log('rapid res', res);
+    });
   }
 
   getValueFromServer(){

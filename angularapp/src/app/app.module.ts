@@ -44,7 +44,7 @@ import { TemplateformComponent } from './templateform/templateform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { ReactassignComponent } from './reactassign/reactassign.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PipeexampleComponent } from './pipeexample/pipeexample.component';
 import { CustomPipe } from './custom.pipe';
 import { SearchPipe } from './search.pipe';
@@ -63,6 +63,13 @@ import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.comp
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ProductModule } from './product/product.module';
 import { OrdersModule } from './orders/orders.module';
+import { AdminModule } from './admin/admin.module';
+import { CustomerModule } from './customer/customer.module';
+import { TodoComponent } from './todo/todo.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { LoginformComponent } from './loginform/loginform.component';
+import { MyserviceService } from './services/myservice.service';
+import { AuthInterceptorService } from './auth/auth-interceptor.service';
 
 
 
@@ -103,6 +110,9 @@ import { OrdersModule } from './orders/orders.module';
     DemopostComponent,
     DemopostdetailsComponent,
     UserdetailsComponent,
+    TodoComponent,
+    HooksComponent,
+    LoginformComponent,
 
   ],
   imports: [
@@ -138,7 +148,15 @@ import { OrdersModule } from './orders/orders.module';
     ProductModule,
     OrdersModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorService,
+    multi: true
+  }, MyserviceService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    console.log('AppModule called');
+  }
+ }

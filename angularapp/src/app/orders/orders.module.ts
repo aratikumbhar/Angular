@@ -14,4 +14,8 @@ import { UtilityModule } from '../shared/utility/utility.module';
     UtilityModule
   ]
 })
-export class OrdersModule { }
+export class OrdersModule {
+  constructor() {
+    console.log('OrdersModule called');
+  }
+ }
