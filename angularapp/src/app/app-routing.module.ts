@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AdduserComponent } from './adduser/adduser.component';
 import { AuthGuard } from './auth.guard';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
@@ -16,6 +17,7 @@ import { ProductComponent } from './product/product.component';
 import { WatchComponent } from './product/watch/watch.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { TodoComponent } from './todo/todo.component';
+import { UnsavedchangesGuard } from './unsavedchanges.guard';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
@@ -40,6 +42,7 @@ const routes: Routes = [
   // { path: 'customer', loadChildren:'./customer/customer.module#CustomerModule'},
   // { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
   { path: 'todo', component: TodoComponent},
+  { path: 'adduser', component: AdduserComponent, canDeactivate: [UnsavedchangesGuard]},
   { path:  '**', component: PagenotfoundComponent}
 ];
 

@@ -70,6 +70,7 @@ import { HooksComponent } from './hooks/hooks.component';
 import { LoginformComponent } from './loginform/loginform.component';
 import { MyserviceService } from './services/myservice.service';
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
+import { AdduserComponent } from './adduser/adduser.component';
 
 
 
@@ -113,6 +114,7 @@ import { AuthInterceptorService } from './auth/auth-interceptor.service';
     TodoComponent,
     HooksComponent,
     LoginformComponent,
+    AdduserComponent,
 
   ],
   imports: [
